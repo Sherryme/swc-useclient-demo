@@ -1,4 +1,3 @@
-'use client';
 import styles from './page.module.css'
 import {Layout, Button} from "antd";
 import {WechatOutlined} from "@ant-design/icons";
