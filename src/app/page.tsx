@@ -1,23 +1,31 @@
 import styles from './page.module.css'
-import {Layout, Button} from "antd";
-import {WechatOutlined} from "@ant-design/icons";
+import { Layout, Button, ConfigProvider, theme } from "antd";
+import { Header, Content, Footer } from 'antd/es/layout/layout';
+import theme_darkAlgorithm from 'antd/es/theme/themes/dark';
+import { WechatOutlined } from "@ant-design/icons";
 
 export default function Home() {
   return (
     <>
         <Layout>
-            <Layout.Header>
+            <Header>
                 header
-            </Layout.Header>
-            <Layout.Content>
+            </Header>
+            <Content>
 
-      <Button type={'primary'}>123</Button>
-      <Button shape="circle" icon={<WechatOutlined />} />
+                <Button type={'primary'}>123</Button>
+                <Button shape="circle" icon={<WechatOutlined />} />
 
-            </Layout.Content>
-            <Layout.Footer>
-                footer
-            </Layout.Footer>
+            </Content>
+            <ConfigProvider
+                theme={{
+                    algorithm: theme_darkAlgorithm,
+                }}
+            >
+                <Footer>
+                    footer
+                </Footer>
+            </ConfigProvider>
         </Layout>
     </>
   )
