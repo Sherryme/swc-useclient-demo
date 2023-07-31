@@ -1,6 +1,6 @@
+'use client';
 import styles from './page.module.css'
 import { Layout, Button, ConfigProvider, theme } from "antd";
-import { Header, Content, Footer } from 'antd/es/layout/layout';
 import theme_darkAlgorithm from 'antd/es/theme/themes/dark';
 import { WechatOutlined } from "@ant-design/icons";
 
@@ -8,23 +8,23 @@ export default function Home() {
   return (
     <>
         <Layout>
-            <Header>
+            <Layout.Header>
                 header
-            </Header>
-            <Content>
+            </Layout.Header>
+            <Layout.Content>
 
                 <Button type={'primary'}>123</Button>
                 <Button shape="circle" icon={<WechatOutlined />} />
 
-            </Content>
+            </Layout.Content>
             <ConfigProvider
                 theme={{
                     algorithm: theme_darkAlgorithm,
                 }}
             >
-                <Footer>
+                <Layout.Footer>
                     footer
-                </Footer>
+                </Layout.Footer>
             </ConfigProvider>
         </Layout>
     </>
